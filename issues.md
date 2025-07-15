@@ -3134,15 +3134,15 @@ Looking forward to the fixes.
 - Partials         0        6       +6     
 ```
 
-| [Flag](https://app.codecov.io/gh/a13xp0p0v/kconfig-hardened-check/pull/86/flags?src=pr&el=flags&utm_medium=referral&utm_source=github&utm_content=comment&utm_campaign=pr+comments&utm_term=Alexander+Popov) | Coverage Δ | |
-|---|---|---|
-| [engine_unit-test](https://app.codecov.io/gh/a13xp0p0v/kconfig-hardened-check/pull/86/flags?src=pr&el=flag&utm_medium=referral&utm_source=github&utm_content=comment&utm_campaign=pr+comments&utm_term=Alexander+Popov) | `?` | |
-| [functional_test](https://app.codecov.io/gh/a13xp0p0v/kconfig-hardened-check/pull/86/flags?src=pr&el=flag&utm_medium=referral&utm_source=github&utm_content=comment&utm_campaign=pr+comments&utm_term=Alexander+Popov) | `98.68% <87.50%> (-0.23%)` | :arrow_down: |
+| [Flag](https://app.codecov.io/gh/a13xp0p0v/kconfig-hardened-check/pull/86/flags?src=pr&el=flags&utm_medium=referral&utm_source=github&utm_content=comment&utm_campaign=pr+comments&utm_term=Alexander+Popov)            | Coverage Δ                 |              |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------- | ------------ |
+| [engine_unit-test](https://app.codecov.io/gh/a13xp0p0v/kconfig-hardened-check/pull/86/flags?src=pr&el=flag&utm_medium=referral&utm_source=github&utm_content=comment&utm_campaign=pr+comments&utm_term=Alexander+Popov) | `?`                        |              |
+| [functional_test](https://app.codecov.io/gh/a13xp0p0v/kconfig-hardened-check/pull/86/flags?src=pr&el=flag&utm_medium=referral&utm_source=github&utm_content=comment&utm_campaign=pr+comments&utm_term=Alexander+Popov)  | `98.68% <87.50%> (-0.23%)` | :arrow_down: |
 
 Flags with carried forward coverage won't be shown. [Click here](https://docs.codecov.io/docs/carryforward-flags?utm_medium=referral&utm_source=github&utm_content=comment&utm_campaign=pr+comments&utm_term=Alexander+Popov#carryforward-flags-in-the-pull-request-comment) to find out more.
 
-| [Files Changed](https://app.codecov.io/gh/a13xp0p0v/kconfig-hardened-check/pull/86?src=pr&el=tree&utm_medium=referral&utm_source=github&utm_content=comment&utm_campaign=pr+comments&utm_term=Alexander+Popov) | Coverage Δ | |
-|---|---|---|
+| [Files Changed](https://app.codecov.io/gh/a13xp0p0v/kconfig-hardened-check/pull/86?src=pr&el=tree&utm_medium=referral&utm_source=github&utm_content=comment&utm_campaign=pr+comments&utm_term=Alexander+Popov)                                                                        | Coverage Δ                 |              |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------- | ------------ |
 | [kconfig\_hardened\_check/engine.py](https://app.codecov.io/gh/a13xp0p0v/kconfig-hardened-check/pull/86?src=pr&el=tree&utm_medium=referral&utm_source=github&utm_content=comment&utm_campaign=pr+comments&utm_term=Alexander+Popov#diff-a2NvbmZpZ19oYXJkZW5lZF9jaGVjay9lbmdpbmUucHk=) | `94.58% <87.50%> (-5.42%)` | :arrow_down: |
 
 ... and [1 file with indirect coverage changes](https://app.codecov.io/gh/a13xp0p0v/kconfig-hardened-check/pull/86/indirect-changes?src=pr&el=tree-more&utm_medium=referral&utm_source=github&utm_content=comment&utm_campaign=pr+comments&utm_term=Alexander+Popov)
@@ -3207,17 +3207,17 @@ It's time to give this project a new name that describes it better: **kernel-har
 + Partials        1        0       -1     
 ```
 
-| [Flag](https://app.codecov.io/gh/a13xp0p0v/kconfig-hardened-check/pull/85/flags?src=pr&el=flags&utm_medium=referral&utm_source=github&utm_content=comment&utm_campaign=pr+comments&utm_term=Alexander+Popov) | Coverage Δ | |
-|---|---|---|
-| [engine_unit-test](https://app.codecov.io/gh/a13xp0p0v/kconfig-hardened-check/pull/85/flags?src=pr&el=flag&utm_medium=referral&utm_source=github&utm_content=comment&utm_campaign=pr+comments&utm_term=Alexander+Popov) | `99.77% <ø> (ø)` | |
-| [functional_test](https://app.codecov.io/gh/a13xp0p0v/kconfig-hardened-check/pull/85/flags?src=pr&el=flag&utm_medium=referral&utm_source=github&utm_content=comment&utm_campaign=pr+comments&utm_term=Alexander+Popov) | `?` | |
+| [Flag](https://app.codecov.io/gh/a13xp0p0v/kconfig-hardened-check/pull/85/flags?src=pr&el=flags&utm_medium=referral&utm_source=github&utm_content=comment&utm_campaign=pr+comments&utm_term=Alexander+Popov)            | Coverage Δ       |     |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------- | --- |
+| [engine_unit-test](https://app.codecov.io/gh/a13xp0p0v/kconfig-hardened-check/pull/85/flags?src=pr&el=flag&utm_medium=referral&utm_source=github&utm_content=comment&utm_campaign=pr+comments&utm_term=Alexander+Popov) | `99.77% <ø> (ø)` |     |
+| [functional_test](https://app.codecov.io/gh/a13xp0p0v/kconfig-hardened-check/pull/85/flags?src=pr&el=flag&utm_medium=referral&utm_source=github&utm_content=comment&utm_campaign=pr+comments&utm_term=Alexander+Popov)  | `?`              |     |
 
 Flags with carried forward coverage won't be shown. [Click here](https://docs.codecov.io/docs/carryforward-flags?utm_medium=referral&utm_source=github&utm_content=comment&utm_campaign=pr+comments&utm_term=Alexander+Popov#carryforward-flags-in-the-pull-request-comment) to find out more.
 
-| [Files Changed](https://app.codecov.io/gh/a13xp0p0v/kconfig-hardened-check/pull/85?src=pr&el=tree&utm_medium=referral&utm_source=github&utm_content=comment&utm_campaign=pr+comments&utm_term=Alexander+Popov) | Coverage Δ | |
-|---|---|---|
-| [kernel\_hardening\_checker/engine.py](https://app.codecov.io/gh/a13xp0p0v/kconfig-hardened-check/pull/85?src=pr&el=tree&utm_medium=referral&utm_source=github&utm_content=comment&utm_campaign=pr+comments&utm_term=Alexander+Popov#diff-a2VybmVsX2hhcmRlbmluZ19jaGVja2VyL2VuZ2luZS5weQ==) | `99.50% <ø> (ø)` | |
-| [kernel\_hardening\_checker/test\_engine.py](https://app.codecov.io/gh/a13xp0p0v/kconfig-hardened-check/pull/85?src=pr&el=tree&utm_medium=referral&utm_source=github&utm_content=comment&utm_campaign=pr+comments&utm_term=Alexander+Popov#diff-a2VybmVsX2hhcmRlbmluZ19jaGVja2VyL3Rlc3RfZW5naW5lLnB5) | `100.00% <ø> (ø)` | |
+| [Files Changed](https://app.codecov.io/gh/a13xp0p0v/kconfig-hardened-check/pull/85?src=pr&el=tree&utm_medium=referral&utm_source=github&utm_content=comment&utm_campaign=pr+comments&utm_term=Alexander+Popov)                                                                                        | Coverage Δ        |     |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------- | --- |
+| [kernel\_hardening\_checker/engine.py](https://app.codecov.io/gh/a13xp0p0v/kconfig-hardened-check/pull/85?src=pr&el=tree&utm_medium=referral&utm_source=github&utm_content=comment&utm_campaign=pr+comments&utm_term=Alexander+Popov#diff-a2VybmVsX2hhcmRlbmluZ19jaGVja2VyL2VuZ2luZS5weQ==)           | `99.50% <ø> (ø)`  |     |
+| [kernel\_hardening\_checker/test\_engine.py](https://app.codecov.io/gh/a13xp0p0v/kconfig-hardened-check/pull/85?src=pr&el=tree&utm_medium=referral&utm_source=github&utm_content=comment&utm_campaign=pr+comments&utm_term=Alexander+Popov#diff-a2VybmVsX2hhcmRlbmluZ19jaGVja2VyL3Rlc3RfZW5naW5lLnB5) | `100.00% <ø> (ø)` |     |
 
 ... and [4 files with indirect coverage changes](https://app.codecov.io/gh/a13xp0p0v/kconfig-hardened-check/pull/85/indirect-changes?src=pr&el=tree-more&utm_medium=referral&utm_source=github&utm_content=comment&utm_campaign=pr+comments&utm_term=Alexander+Popov)
 
@@ -3587,15 +3587,15 @@ https://github.com/a13xp0p0v/kconfig-hardened-check/pull/86
 - Partials        6        7       +1     
 ```
 
-| Flag | Coverage Δ | |
-|---|---|---|
-| engine_unit-test | `76.80% <ø> (ø)` | |
-| functional_test | `97.97% <80.00%> (-0.26%)` | :arrow_down: |
+| Flag             | Coverage Δ                 |              |
+| ---------------- | -------------------------- | ------------ |
+| engine_unit-test | `76.80% <ø> (ø)`           |              |
+| functional_test  | `97.97% <80.00%> (-0.26%)` | :arrow_down: |
 
 Flags with carried forward coverage won't be shown. [Click here](https://docs.codecov.io/docs/carryforward-flags?utm_medium=referral&utm_source=github&utm_content=comment&utm_campaign=pr+comments&utm_term=Alexander+Popov#carryforward-flags-in-the-pull-request-comment) to find out more.
 
-| [Impacted Files](https://codecov.io/gh/a13xp0p0v/kconfig-hardened-check/pull/80?src=pr&el=tree&utm_medium=referral&utm_source=github&utm_content=comment&utm_campaign=pr+comments&utm_term=Alexander+Popov) | Coverage Δ | |
-|---|---|---|
+| [Impacted Files](https://codecov.io/gh/a13xp0p0v/kconfig-hardened-check/pull/80?src=pr&el=tree&utm_medium=referral&utm_source=github&utm_content=comment&utm_campaign=pr+comments&utm_term=Alexander+Popov)                                                                                 | Coverage Δ                 |              |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------- | ------------ |
 | [kconfig\_hardened\_check/\_\_init\_\_.py](https://codecov.io/gh/a13xp0p0v/kconfig-hardened-check/pull/80?src=pr&el=tree&utm_medium=referral&utm_source=github&utm_content=comment&utm_campaign=pr+comments&utm_term=Alexander+Popov#diff-a2NvbmZpZ19oYXJkZW5lZF9jaGVjay9fX2luaXRfXy5weQ==) | `99.10% <80.00%> (-0.90%)` | :arrow_down: |
 
 :mega: We’re building smart automated test selection to slash your CI/CD build times. [Learn more](https://about.codecov.io/iterative-testing/?utm_medium=referral&utm_source=github&utm_content=comment&utm_campaign=pr+comments&utm_term=Alexander+Popov)
@@ -3679,14 +3679,14 @@ First differing element 7:
 + Partials       27       26       -1     
 ```
 
-| Flag | Coverage Δ | |
-|---|---|---|
+| Flag            | Coverage Δ            |            |
+| --------------- | --------------------- | ---------- |
 | functional_test | `93.20% <ø> (+0.40%)` | :arrow_up: |
 
 Flags with carried forward coverage won't be shown. [Click here](https://docs.codecov.io/docs/carryforward-flags?utm_medium=referral&utm_source=github&utm_content=comment&utm_campaign=pr+comments&utm_term=Alexander+Popov#carryforward-flags-in-the-pull-request-comment) to find out more.
 
-| [Impacted Files](https://codecov.io/gh/a13xp0p0v/kconfig-hardened-check/pull/78?src=pr&el=tree&utm_medium=referral&utm_source=github&utm_content=comment&utm_campaign=pr+comments&utm_term=Alexander+Popov) | Coverage Δ | |
-|---|---|---|
+| [Impacted Files](https://codecov.io/gh/a13xp0p0v/kconfig-hardened-check/pull/78?src=pr&el=tree&utm_medium=referral&utm_source=github&utm_content=comment&utm_campaign=pr+comments&utm_term=Alexander+Popov)                                                                                      | Coverage Δ                |            |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------- | ---------- |
 | [kconfig\_hardened\_check/\_\_init\_\_.py](https://codecov.io/gh/a13xp0p0v/kconfig-hardened-check/pull/78/diff?src=pr&el=tree&utm_medium=referral&utm_source=github&utm_content=comment&utm_campaign=pr+comments&utm_term=Alexander+Popov#diff-a2NvbmZpZ19oYXJkZW5lZF9jaGVjay9fX2luaXRfXy5weQ==) | `93.25% <0.00%> (+0.41%)` | :arrow_up: |
 
 :mega: We’re building smart automated test selection to slash your CI/CD build times. [Learn more](https://about.codecov.io/iterative-testing/?utm_medium=referral&utm_source=github&utm_content=comment&utm_campaign=pr+comments&utm_term=Alexander+Popov)
@@ -3735,9 +3735,9 @@ Has been tested on Ubuntu 20.04
   Partials       27       27           
 ```
 
-| Flag | Coverage Δ | |
-|---|---|---|
-| functional_test | `92.79% <ø> (ø)` | |
+| Flag            | Coverage Δ       |     |
+| --------------- | ---------------- | --- |
+| functional_test | `92.79% <ø> (ø)` |     |
 
 Flags with carried forward coverage won't be shown. [Click here](https://docs.codecov.io/docs/carryforward-flags?utm_medium=referral&utm_source=github&utm_content=comment&utm_campaign=pr+comments&utm_term=Alexander+Popov#carryforward-flags-in-the-pull-request-comment) to find out more.
 
@@ -4330,9 +4330,9 @@ This might resolve #63
   Partials        7        7           
 ```
 
-| Flag | Coverage Δ | |
-|---|---|---|
-| functional_test | `98.08% <ø> (ø)` | |
+| Flag            | Coverage Δ       |     |
+| --------------- | ---------------- | --- |
+| functional_test | `98.08% <ø> (ø)` |     |
 
 Flags with carried forward coverage won't be shown. [Click here](https://docs.codecov.io/docs/carryforward-flags?utm_medium=referral&utm_source=github&utm_content=comment&utm_campaign=pr+comments&utm_term=Alexander+Popov#carryforward-flags-in-the-pull-request-comment) to find out more.
 
@@ -4664,14 +4664,14 @@ Signed-off-by: Denis Efremov <efremov@linux.com>
   Partials       28       28              
 ```
 
-| Flag | Coverage Δ | |
-|---|---|---|
+| Flag            | Coverage Δ                  |            |
+| --------------- | --------------------------- | ---------- |
 | functional_test | `90.33% <100.00%> (+0.01%)` | :arrow_up: |
 
 Flags with carried forward coverage won't be shown. [Click here](https://docs.codecov.io/docs/carryforward-flags?utm_medium=referral&utm_source=github&utm_content=comment&utm_campaign=pr+comments&utm_term=Alexander+Popov#carryforward-flags-in-the-pull-request-comment) to find out more.
 
-| [Impacted Files](https://codecov.io/gh/a13xp0p0v/kconfig-hardened-check/pull/62?src=pr&el=tree&utm_medium=referral&utm_source=github&utm_content=comment&utm_campaign=pr+comments&utm_term=Alexander+Popov) | Coverage Δ | |
-|---|---|---|
+| [Impacted Files](https://codecov.io/gh/a13xp0p0v/kconfig-hardened-check/pull/62?src=pr&el=tree&utm_medium=referral&utm_source=github&utm_content=comment&utm_campaign=pr+comments&utm_term=Alexander+Popov)                                                                                      | Coverage Δ                  |            |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | --------------------------- | ---------- |
 | [kconfig\_hardened\_check/\_\_init\_\_.py](https://codecov.io/gh/a13xp0p0v/kconfig-hardened-check/pull/62/diff?src=pr&el=tree&utm_medium=referral&utm_source=github&utm_content=comment&utm_campaign=pr+comments&utm_term=Alexander+Popov#diff-a2NvbmZpZ19oYXJkZW5lZF9jaGVjay9fX2luaXRfXy5weQ==) | `90.34% <100.00%> (+0.01%)` | :arrow_up: |
 
 ------
@@ -4800,14 +4800,14 @@ https://github.com/torvalds/linux/blob/master/lib/Kconfig.ubsan
   Partials       25       25              
 ```
 
-| Flag | Coverage Δ | |
-|---|---|---|
+| Flag            | Coverage Δ                  |            |
+| --------------- | --------------------------- | ---------- |
 | functional_test | `91.48% <100.00%> (+0.01%)` | :arrow_up: |
 
 Flags with carried forward coverage won't be shown. [Click here](https://docs.codecov.io/docs/carryforward-flags?utm_medium=referral&utm_source=github&utm_content=comment&utm_campaign=pr+comments&utm_term=Alexander+Popov#carryforward-flags-in-the-pull-request-comment) to find out more.
 
-| [Impacted Files](https://codecov.io/gh/a13xp0p0v/kconfig-hardened-check/pull/60?src=pr&el=tree&utm_medium=referral&utm_source=github&utm_content=comment&utm_campaign=pr+comments&utm_term=Alexander+Popov) | Coverage Δ | |
-|---|---|---|
+| [Impacted Files](https://codecov.io/gh/a13xp0p0v/kconfig-hardened-check/pull/60?src=pr&el=tree&utm_medium=referral&utm_source=github&utm_content=comment&utm_campaign=pr+comments&utm_term=Alexander+Popov)                                                                                      | Coverage Δ                  |            |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | --------------------------- | ---------- |
 | [kconfig\_hardened\_check/\_\_init\_\_.py](https://codecov.io/gh/a13xp0p0v/kconfig-hardened-check/pull/60/diff?src=pr&el=tree&utm_medium=referral&utm_source=github&utm_content=comment&utm_campaign=pr+comments&utm_term=Alexander+Popov#diff-a2NvbmZpZ19oYXJkZW5lZF9jaGVjay9fX2luaXRfXy5weQ==) | `91.50% <100.00%> (+0.01%)` | :arrow_up: |
 
 ------
@@ -5041,14 +5041,14 @@ However, qemu (5.2.0) still enables floppy device by default.
   Partials       18       18              
 ```
 
-| Flag | Coverage Δ | |
-|---|---|---|
+| Flag            | Coverage Δ                  |            |
+| --------------- | --------------------------- | ---------- |
 | functional_test | `92.96% <100.00%> (+0.01%)` | :arrow_up: |
 
 Flags with carried forward coverage won't be shown. [Click here](https://docs.codecov.io/docs/carryforward-flags?utm_medium=referral&utm_source=github&utm_content=comment&utm_campaign=pr+comments&utm_term=Alexander+Popov#carryforward-flags-in-the-pull-request-comment) to find out more.
 
-| [Impacted Files](https://codecov.io/gh/a13xp0p0v/kconfig-hardened-check/pull/54?src=pr&el=tree&utm_medium=referral&utm_source=github&utm_content=comment&utm_campaign=pr+comments&utm_term=Alexander+Popov) | Coverage Δ | |
-|---|---|---|
+| [Impacted Files](https://codecov.io/gh/a13xp0p0v/kconfig-hardened-check/pull/54?src=pr&el=tree&utm_medium=referral&utm_source=github&utm_content=comment&utm_campaign=pr+comments&utm_term=Alexander+Popov)                                                                                      | Coverage Δ                  |            |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | --------------------------- | ---------- |
 | [kconfig\_hardened\_check/\_\_init\_\_.py](https://codecov.io/gh/a13xp0p0v/kconfig-hardened-check/pull/54/diff?src=pr&el=tree&utm_medium=referral&utm_source=github&utm_content=comment&utm_campaign=pr+comments&utm_term=Alexander+Popov#diff-a2NvbmZpZ19oYXJkZW5lZF9jaGVjay9fX2luaXRfXy5weQ==) | `93.02% <100.00%> (+0.01%)` | :arrow_up: |
 
 ------
@@ -5187,14 +5187,14 @@ config chooses the default boot state.
   Partials       18       18              
 ```
 
-| Flag | Coverage Δ | |
-|---|---|---|
+| Flag            | Coverage Δ                  |            |
+| --------------- | --------------------------- | ---------- |
 | functional_test | `92.88% <100.00%> (+0.01%)` | :arrow_up: |
 
 Flags with carried forward coverage won't be shown. [Click here](https://docs.codecov.io/docs/carryforward-flags?utm_medium=referral&utm_source=github&utm_content=comment&utm_campaign=pr+comments&utm_term=Alexander+Popov#carryforward-flags-in-the-pull-request-comment) to find out more.
 
-| [Impacted Files](https://codecov.io/gh/a13xp0p0v/kconfig-hardened-check/pull/52?src=pr&el=tree&utm_medium=referral&utm_source=github&utm_content=comment&utm_campaign=pr+comments&utm_term=Alexander+Popov) | Coverage Δ | |
-|---|---|---|
+| [Impacted Files](https://codecov.io/gh/a13xp0p0v/kconfig-hardened-check/pull/52?src=pr&el=tree&utm_medium=referral&utm_source=github&utm_content=comment&utm_campaign=pr+comments&utm_term=Alexander+Popov)                                                                                      | Coverage Δ                  |            |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | --------------------------- | ---------- |
 | [kconfig\_hardened\_check/\_\_init\_\_.py](https://codecov.io/gh/a13xp0p0v/kconfig-hardened-check/pull/52/diff?src=pr&el=tree&utm_medium=referral&utm_source=github&utm_content=comment&utm_campaign=pr+comments&utm_term=Alexander+Popov#diff-a2NvbmZpZ19oYXJkZW5lZF9jaGVjay9fX2luaXRfXy5weQ==) | `92.94% <100.00%> (+0.01%)` | :arrow_up: |
 
 ------
@@ -5268,9 +5268,9 @@ Sure thing! A link to the publicly available configuration has been added. @a13x
   Partials       18       18           
 ```
 
-| Flag | Coverage Δ | |
-|---|---|---|
-| functional_test | `92.87% <ø> (ø)` | |
+| Flag            | Coverage Δ       |     |
+| --------------- | ---------------- | --- |
+| functional_test | `92.87% <ø> (ø)` |     |
 
 Flags with carried forward coverage won't be shown. [Click here](https://docs.codecov.io/docs/carryforward-flags?utm_medium=referral&utm_source=github&utm_content=comment&utm_campaign=pr+comments&utm_term=Alexander+Popov#carryforward-flags-in-the-pull-request-comment) to find out more.
 
@@ -5916,12 +5916,12 @@ Best regards,
   Partials       15       15              
 ```
 
-| Flag | Coverage Δ | |
-|---|---|---|
+| Flag             | Coverage Δ                  |            |
+| ---------------- | --------------------------- | ---------- |
 | #functional_test | `93.20% <100.00%> (+0.01%)` | :arrow_up: |
 
-| [Impacted Files](https://codecov.io/gh/a13xp0p0v/kconfig-hardened-check/pull/41?src=pr&el=tree) | Coverage Δ | |
-|---|---|---|
+| [Impacted Files](https://codecov.io/gh/a13xp0p0v/kconfig-hardened-check/pull/41?src=pr&el=tree)                                                                                      | Coverage Δ                  |            |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | --------------------------- | ---------- |
 | [kconfig\_hardened\_check/\_\_init\_\_.py](https://codecov.io/gh/a13xp0p0v/kconfig-hardened-check/pull/41/diff?src=pr&el=tree#diff-a2NvbmZpZ19oYXJkZW5lZF9jaGVjay9fX2luaXRfXy5weQ==) | `93.27% <100.00%> (+0.01%)` | :arrow_up: |
 
 ------
@@ -5977,12 +5977,12 @@ Merged.
 + Partials       15       14       -1     
 ```
 
-| Flag | Coverage Δ | |
-|---|---|---|
+| Flag             | Coverage Δ                 |            |
+| ---------------- | -------------------------- | ---------- |
 | #functional_test | `93.70% <76.92%> (+0.60%)` | :arrow_up: |
 
-| [Impacted Files](https://codecov.io/gh/a13xp0p0v/kconfig-hardened-check/pull/39?src=pr&el=tree) | Coverage Δ | |
-|---|---|---|
+| [Impacted Files](https://codecov.io/gh/a13xp0p0v/kconfig-hardened-check/pull/39?src=pr&el=tree)                                                                                      | Coverage Δ                 |            |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------- | ---------- |
 | [kconfig\_hardened\_check/\_\_init\_\_.py](https://codecov.io/gh/a13xp0p0v/kconfig-hardened-check/pull/39/diff?src=pr&el=tree#diff-a2NvbmZpZ19oYXJkZW5lZF9jaGVjay9fX2luaXRfXy5weQ==) | `93.80% <76.92%> (+0.61%)` | :arrow_up: |
 
 ------

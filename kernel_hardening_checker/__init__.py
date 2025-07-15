@@ -57,8 +57,9 @@ def get_local_kconfig_file(version_fname: str) -> Tuple[StrOrNone, str]:
     kconfig_2 = '/boot/config-'
     with _open(version_fname) as f:
         line = f.readline()
-        assert(line), f'empty {version_fname}'
-        assert(line.startswith('Linux version ')), f'unexpected contents of {version_fname}'
+        assert (line), f'empty {version_fname}'
+        assert (line.startswith('Linux version ')
+                ), f'unexpected contents of {version_fname}'
         parts = line.split()
         ver_str = parts[2]
         kconfig_2 = kconfig_2 + ver_str
@@ -120,7 +121,8 @@ def detect_arch_by_sysctl(fname: str) -> Tuple[StrOrNone, str]:
             if line.startswith('kernel.arch'):
                 value = line.split('=', 1)[1].strip()
                 for arch, pattern in arch_mapping.items():
-                    assert(arch in SUPPORTED_ARCHS), 'invalid arch mapping in sysctl'
+                    assert (
+                        arch in SUPPORTED_ARCHS), 'invalid arch mapping in sysctl'
                     if re.search(pattern, value):
                         return arch, value
                 return None, f'{value} is an unsupported arch'
@@ -129,7 +131,8 @@ def detect_arch_by_sysctl(fname: str) -> Tuple[StrOrNone, str]:
 
 def detect_kernel_version(fname: str) -> Tuple[TupleOrNone, str]:
     with _open(fname) as f:
-        ver_pattern = re.compile(r"^# Linux/.+ Kernel Configuration$|^Linux version .+")
+        ver_pattern = re.compile(
+            r"^# Linux/.+ Kernel Configuration$|^Linux version .+")
         for line in f.readlines():
             if ver_pattern.match(line):
                 line = line.strip()
@@ -160,7 +163,8 @@ def detect_compiler(fname: str) -> Tuple[StrOrNone, str]:
         return f'CLANG {clang_version}', 'OK'
     if gcc_version != '0' and clang_version == '0':
         return f'GCC {gcc_version}', 'OK'
-    sys.exit(f'[-] ERROR: invalid GCC_VERSION and CLANG_VERSION: {gcc_version} {clang_version}')
+    sys.exit(
+        f'[-] ERROR: invalid GCC_VERSION and CLANG_VERSION: {gcc_version} {clang_version}')
 
 
 def print_checklist(mode: StrOrNone, checklist: List[ChecklistObjType], with_results: bool) -> None:
@@ -187,14 +191,14 @@ def print_checklist(mode: StrOrNone, checklist: List[ChecklistObjType], with_res
     fail_count = 0
     for opt in checklist:
         if with_results:
-            assert(opt.result), f'unexpected empty result of {opt.name} check'
+            assert (opt.result), f'unexpected empty result of {opt.name} check'
             if opt.result.startswith('OK'):
                 ok_count += 1
                 if mode == 'show_fail':
                     continue
             else:
-                assert(opt.result.startswith('FAIL')), \
-                       f'unexpected result "{opt.result}" of {opt.name} check'
+                assert (opt.result.startswith('FAIL')), \
+                    f'unexpected result "{opt.result}" of {opt.name} check'
                 fail_count += 1
                 if mode == 'show_ok':
                     continue
@@ -212,7 +216,8 @@ def print_checklist(mode: StrOrNone, checklist: List[ChecklistObjType], with_res
             fail_suppressed = ' (suppressed in output)'
         if mode == 'show_fail':
             ok_suppressed = ' (suppressed in output)'
-        print(f'[+] Config check is finished: \'OK\' - {ok_count}{ok_suppressed} / \'FAIL\' - {fail_count}{fail_suppressed}')
+        print(
+            f'[+] Config check is finished: \'OK\' - {ok_count}{ok_suppressed} / \'FAIL\' - {fail_count}{fail_suppressed}')
 
 
 def parse_kconfig_file(_mode: StrOrNone, parsed_options: Dict[str, str], fname: str) -> None:
@@ -230,19 +235,23 @@ def parse_kconfig_file(_mode: StrOrNone, parsed_options: Dict[str, str], fname: 
                 if value == 'is not set':
                     sys.exit(f'[-] ERROR: bad enabled Kconfig option "{line}"')
                 if value == '':
-                    print(f'[!] WARNING: found strange Kconfig option {option} with empty value')
+                    print(
+                        f'[!] WARNING: found strange Kconfig option {option} with empty value')
             elif opt_is_off.match(line):
                 option, value = line[2:].split(' ', 1)
-                assert(value == 'is not set'), \
-                       f'unexpected value of disabled Kconfig option "{line}"'
+                assert (value == 'is not set'), \
+                    f'unexpected value of disabled Kconfig option "{line}"'
             elif line != '' and not line.startswith('#'):
-                sys.exit(f'[-] ERROR: unexpected line in Kconfig file: "{line}"')
+                sys.exit(
+                    f'[-] ERROR: unexpected line in Kconfig file: "{line}"')
 
             if option in parsed_options:
-                sys.exit(f'[-] ERROR: Kconfig option "{line}" is found multiple times')
+                sys.exit(
+                    f'[-] ERROR: Kconfig option "{line}" is found multiple times')
 
             if option:
-                assert(value is not None), f'unexpected None value for {option}'
+                assert (
+                    value is not None), f'unexpected None value for {option}'
                 parsed_options[option] = value
 
 
@@ -263,11 +272,12 @@ def parse_cmdline_file(mode: StrOrNone, parsed_options: Dict[str, str], fname: s
                 name, value = opt.split('=', 1)
             else:
                 name = opt
-                value = '' # '' is not None
+                value = ''  # '' is not None
             if name in parsed_options and mode != 'json':
-                print(f'[!] WARNING: cmdline option "{name}" is found multiple times')
+                print(
+                    f'[!] WARNING: cmdline option "{name}" is found multiple times')
             value = normalize_cmdline_options(name, value)
-            assert(value is not None), f'unexpected None value for {name}'
+            assert (value is not None), f'unexpected None value for {name}'
             parsed_options[name] = value
 
 
@@ -282,7 +292,8 @@ def parse_sysctl_file(mode: StrOrNone, parsed_options: Dict[str, str], fname: st
             if not line or line.startswith('#'):
                 continue
             if not sysctl_pattern.match(line):
-                sys.exit(f'[-] ERROR: unexpected line in sysctl file: "{line}"')
+                sys.exit(
+                    f'[-] ERROR: unexpected line in sysctl file: "{line}"')
             option, value = line.split('=', 1)
             option = option.strip()
             value = value.strip()
@@ -292,11 +303,13 @@ def parse_sysctl_file(mode: StrOrNone, parsed_options: Dict[str, str], fname: st
     # let's check the presence of some ancient sysctl option
     # to ensure that we are parsing the output of "sudo sysctl -a > file"
     if 'kernel.printk' not in parsed_options and mode != 'json':
-        print(f'[!] WARNING: ancient sysctl options are not found in {fname}, try checking the output of "sudo sysctl -a"')
+        print(
+            f'[!] WARNING: ancient sysctl options are not found in {fname}, try checking the output of "sudo sysctl -a"')
 
     # let's check the presence of a sysctl option available for root
     if 'kernel.cad_pid' not in parsed_options and mode != 'json':
-        print(f'[!] WARNING: sysctl options available for root are not found in {fname}, try checking the output of "sudo sysctl -a"')
+        print(
+            f'[!] WARNING: sysctl options available for root are not found in {fname}, try checking the output of "sudo sysctl -a"')
 
 
 def refine_check(mode: StrOrNone, checklist: List[ChecklistObjType], parsed_options: Dict[str, str],
@@ -312,7 +325,7 @@ def refine_check(mode: StrOrNone, checklist: List[ChecklistObjType], parsed_opti
 
 def perform_checking(mode: StrOrNone, version: TupleOrNone,
                      kconfig: StrOrNone, cmdline: StrOrNone, sysctl: StrOrNone) -> None:
-    config_checklist = [] # type: List[ChecklistObjType]
+    config_checklist = []  # type: List[ChecklistObjType]
     arch = None
 
     # detect the kernel architecture
@@ -322,11 +335,12 @@ def perform_checking(mode: StrOrNone, version: TupleOrNone,
             sys.exit(f'[-] ERROR: {msg}')
         mprint(mode, f'[+] Detected architecture: {arch}')
     else:
-        assert(not cmdline), 'wrong perform_checking() usage'
-        assert(sysctl), 'wrong perform_checking() usage'
+        assert (not cmdline), 'wrong perform_checking() usage'
+        assert (sysctl), 'wrong perform_checking() usage'
         arch, msg = detect_arch_by_sysctl(sysctl)
         if arch is None:
-            mprint(mode, f'[!] WARNING: {msg}, arch-dependent checks will be dropped')
+            mprint(
+                mode, f'[!] WARNING: {msg}, arch-dependent checks will be dropped')
         else:
             mprint(mode, f'[+] Detected architecture: {arch} ({msg})')
 
@@ -340,12 +354,12 @@ def perform_checking(mode: StrOrNone, version: TupleOrNone,
 
     if kconfig:
         # add relevant Kconfig checks to the checklist
-        assert(arch), 'arch is mandatory for the kconfig checks'
+        assert (arch), 'arch is mandatory for the kconfig checks'
         add_kconfig_checks(config_checklist, arch)
 
     if cmdline:
         # add relevant cmdline checks to the checklist
-        assert(arch), 'arch is mandatory for the cmdline checks'
+        assert (arch), 'arch is mandatory for the cmdline checks'
         add_cmdline_checks(config_checklist, arch)
 
     if sysctl:
@@ -356,7 +370,7 @@ def perform_checking(mode: StrOrNone, version: TupleOrNone,
         # populate the checklist with the kernel version data
         populate_with_data(config_checklist, version, 'version')
 
-    parsed_kconfig_options = {} # type: Dict[str, str]
+    parsed_kconfig_options = {}  # type: Dict[str, str]
     if kconfig:
         # populate the checklist with the parsed Kconfig data
         parse_kconfig_file(mode, parsed_kconfig_options, kconfig)
@@ -370,13 +384,13 @@ def perform_checking(mode: StrOrNone, version: TupleOrNone,
 
     if cmdline:
         # populate the checklist with the parsed cmdline data
-        parsed_cmdline_options = {} # type: Dict[str, str]
+        parsed_cmdline_options = {}  # type: Dict[str, str]
         parse_cmdline_file(mode, parsed_cmdline_options, cmdline)
         populate_with_data(config_checklist, parsed_cmdline_options, 'cmdline')
 
     if sysctl:
         # populate the checklist with the parsed sysctl data
-        parsed_sysctl_options = {} # type: Dict[str, str]
+        parsed_sysctl_options = {}  # type: Dict[str, str]
         parse_sysctl_file(mode, parsed_sysctl_options, sysctl)
         populate_with_data(config_checklist, parsed_sysctl_options, 'sysctl')
         # refine the values of some checks
@@ -391,11 +405,14 @@ def perform_checking(mode: StrOrNone, version: TupleOrNone,
     if mode == 'verbose':
         # print the parsed options without the checks (for debugging)
         if kconfig:
-            print_unknown_options(config_checklist, parsed_kconfig_options, 'kconfig')
+            print_unknown_options(
+                config_checklist, parsed_kconfig_options, 'kconfig')
         if cmdline:
-            print_unknown_options(config_checklist, parsed_cmdline_options, 'cmdline')
+            print_unknown_options(
+                config_checklist, parsed_cmdline_options, 'cmdline')
         if sysctl:
-            print_unknown_options(config_checklist, parsed_sysctl_options, 'sysctl')
+            print_unknown_options(
+                config_checklist, parsed_sysctl_options, 'sysctl')
 
     # finally print the results
     print_checklist(mode, config_checklist, True)
@@ -410,7 +427,8 @@ def main() -> None:
     output_modes = ['verbose', 'json', 'show_ok', 'show_fail']
     parser = ArgumentParser(prog='kernel-hardening-checker',
                             description='A tool for checking the security hardening options of the Linux kernel')
-    parser.add_argument('--version', action='version', version=f'%(prog)s {__version__}')
+    parser.add_argument('--version', action='version',
+                        version=f'%(prog)s {__version__}')
     parser.add_argument('-m', '--mode', choices=output_modes,
                         help='select a special output mode instead of the default one')
     parser.add_argument('-a', '--autodetect', action='store_true',
@@ -436,36 +454,44 @@ def main() -> None:
 
     if args.autodetect:
         if args.config or args.kernel_version or args.cmdline or args.sysctl:
-            sys.exit('[-] ERROR: --autodetect should find the configuration, no other arguments are needed')
+            sys.exit(
+                '[-] ERROR: --autodetect should find the configuration, no other arguments are needed')
         if args.print:
-            sys.exit('[-] ERROR: --autodetect and --print can\'t be used together')
+            sys.exit(
+                '[-] ERROR: --autodetect and --print can\'t be used together')
         if args.generate:
-            sys.exit('[-] ERROR: --autodetect and --generate can\'t be used together')
+            sys.exit(
+                '[-] ERROR: --autodetect and --generate can\'t be used together')
 
-        mprint(mode, '[+] Going to autodetect and check the security hardening options of the running kernel')
+        mprint(
+            mode, '[+] Going to autodetect and check the security hardening options of the running kernel')
 
         version_file = '/proc/version'
         kernel_version, msg = detect_kernel_version(version_file)
         if kernel_version is None:
             sys.exit(f'[-] ERROR: parsing {version_file} failed: {msg}')
-        mprint(mode, f'[+] Detected version of the running kernel: {kernel_version}')
+        mprint(
+            mode, f'[+] Detected version of the running kernel: {kernel_version}')
 
         kconfig_file, msg = get_local_kconfig_file(version_file)
         if kconfig_file is None:
             sys.exit(f'[-] ERROR: detecting kconfig file failed: {msg}')
-        mprint(mode, f'[+] Detected kconfig file of the running kernel: {kconfig_file}')
+        mprint(
+            mode, f'[+] Detected kconfig file of the running kernel: {kconfig_file}')
 
         cmdline_file = '/proc/cmdline'
         if not os.path.isfile(cmdline_file):
             sys.exit(f'[-] ERROR: no kernel cmdline file {cmdline_file}')
-        mprint(mode, f'[+] Detected cmdline parameters of the running kernel: {cmdline_file}')
+        mprint(
+            mode, f'[+] Detected cmdline parameters of the running kernel: {cmdline_file}')
 
         sysctl_file, msg = get_local_sysctl_file()
         if sysctl_file is None:
             sys.exit(f'[-] ERROR: failed to get sysctls: {msg}')
         mprint(mode, f'[+] Saved sysctls to a temporary file {sysctl_file}')
 
-        perform_checking(mode, kernel_version, kconfig_file, cmdline_file, sysctl_file)
+        perform_checking(mode, kernel_version, kconfig_file,
+                         cmdline_file, sysctl_file)
 
         os.remove(sysctl_file)
         sys.exit(0)
@@ -478,7 +504,7 @@ def main() -> None:
         mprint(mode, f'[+] Sysctl output file to check: {args.sysctl}')
 
     if args.config:
-        assert(not args.autodetect), 'unexpected args'
+        assert (not args.autodetect), 'unexpected args'
         if args.print:
             sys.exit('[-] ERROR: --config and --print can\'t be used together')
         if args.generate:
@@ -490,17 +516,19 @@ def main() -> None:
             kernel_version, msg = detect_kernel_version(args.config)
         if kernel_version is None:
             if args.kernel_version is None:
-                print('[!] HINT: you can provide the kernel version file through --kernel-version option')
+                print(
+                    '[!] HINT: you can provide the kernel version file through --kernel-version option')
             sys.exit(f'[-] ERROR: {msg}')
         mprint(mode, f'[+] Detected kernel version: {kernel_version}')
 
-        perform_checking(mode, kernel_version, args.config, args.cmdline, args.sysctl)
+        perform_checking(mode, kernel_version, args.config,
+                         args.cmdline, args.sysctl)
         sys.exit(0)
     elif args.cmdline:
         sys.exit('[-] ERROR: checking cmdline depends on checking Kconfig')
     elif args.sysctl:
         # separate sysctl checking (without kconfig)
-        assert(not args.autodetect), 'unexpected args'
+        assert (not args.autodetect), 'unexpected args'
         if args.kernel_version:
             sys.exit('[-] ERROR: --kernel-version is not needed for --sysctl')
         if args.print:
@@ -511,11 +539,11 @@ def main() -> None:
         sys.exit(0)
 
     if args.print:
-        assert(not args.autodetect and
-               args.config is None and
-               args.cmdline is None and
-               args.sysctl is None), \
-               'unexpected args'
+        assert (not args.autodetect and
+                args.config is None and
+                args.cmdline is None and
+                args.sysctl is None), \
+            'unexpected args'
         if args.kernel_version:
             sys.exit('[-] ERROR: --kernel-version is not needed for --print')
         if args.generate:
@@ -523,22 +551,23 @@ def main() -> None:
         if mode and mode not in ('verbose', 'json'):
             sys.exit(f'[-] ERROR: wrong mode "{mode}" for --print')
         arch = args.print
-        assert(arch), 'unexpected empty arch from ArgumentParser'
-        config_checklist = [] # type: List[ChecklistObjType]
+        assert (arch), 'unexpected empty arch from ArgumentParser'
+        config_checklist = []  # type: List[ChecklistObjType]
         add_kconfig_checks(config_checklist, arch)
         add_cmdline_checks(config_checklist, arch)
         add_sysctl_checks(config_checklist, arch)
-        mprint(mode, f'[+] Printing kernel security hardening options for {arch}...')
+        mprint(
+            mode, f'[+] Printing kernel security hardening options for {arch}...')
         print_checklist(mode, config_checklist, False)
         sys.exit(0)
 
     if args.generate:
-        assert(not args.autodetect and
-               args.config is None and
-               args.cmdline is None and
-               args.sysctl is None and
-               args.print is None), \
-               'unexpected args'
+        assert (not args.autodetect and
+                args.config is None and
+                args.cmdline is None and
+                args.sysctl is None and
+                args.print is None), \
+            'unexpected args'
         if mode:
             sys.exit(f'[-] ERROR: wrong mode "{mode}" for --generate')
         if args.kernel_version:
@@ -546,12 +575,13 @@ def main() -> None:
         arch = args.generate
         config_checklist = []
         add_kconfig_checks(config_checklist, arch)
-        print(f'CONFIG_{arch}=y') # the Kconfig fragment should describe the architecture
+        # the Kconfig fragment should describe the architecture
+        print(f'CONFIG_{arch}=y')
         for opt in config_checklist:
             if opt.name in ('CONFIG_ARCH_MMAP_RND_BITS', 'CONFIG_ARCH_MMAP_RND_COMPAT_BITS', 'CONFIG_LSM'):
-                continue # don't add Kconfig options with a value that needs refinement
+                continue  # don't add Kconfig options with a value that needs refinement
             if opt.expected == 'is not off':
-                continue # don't add Kconfig options without explicitly recommended values
+                continue  # don't add Kconfig options without explicitly recommended values
             if opt.expected == 'is not set':
                 print(f'# {opt.name} is not set')
             else:
